@@ -1,6 +1,7 @@
-describe('Navigation on the site of clothes', () => {
-  it('Access the page and verify the address', () => {
+describe('Navigation tests', () => {
+  it('Navigate to the home page and verify url', () => {
     cy.visit('/');
-    cy.url().should('eq', 'http://automationpractice.com/index.php');
+    cy.url().should('eq', Cypress.env('baseUrl'));
+  
   });
 });
