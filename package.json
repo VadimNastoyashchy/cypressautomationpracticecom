@@ -1,0 +1,22 @@
+{
+  "name": "cypressautomationpracticecom",
+  "version": "1.0.0",
+  "description": "> Before you follow the steps below, make sure you have the [Node.js](https://nodejs.org/en/download/) installed _globally_ only your system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VadimNastoyashchy/cypressautomationpracticecom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VadimNastoyashchy/cypressautomationpracticecom/issues"
+  },
+  "homepage": "https://github.com/VadimNastoyashchy/cypressautomationpracticecom#readme",
+  "devDependencies": {
+    "cypress": "^10.2.0"
+  }
+}
