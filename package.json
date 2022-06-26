@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/VadimNastoyashchy/cypressautomationpracticecom#readme",
   "devDependencies": {
-    "cypress": "10.2.0"
+    "cypress": "10.2.0",
+    "eslint-plugin-cypress": "2.12.1"
   }
 }
