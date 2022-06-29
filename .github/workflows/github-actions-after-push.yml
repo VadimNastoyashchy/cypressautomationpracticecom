@@ -18,4 +18,4 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Cypress run
-        run: npx cypress run --record --key acf5a95a-f5fe-4d53-818a-a6afa18e512c
+        run: npx cypress run
