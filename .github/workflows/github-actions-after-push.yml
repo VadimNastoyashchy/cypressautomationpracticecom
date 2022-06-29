@@ -6,7 +6,7 @@ on:
 jobs:
  cypress-run:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Checkout
         uses: actions/checkout@v2
         with:
@@ -18,4 +18,4 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Cypress run
-        run: npx cypress run
+        run: npx cypress run --record --key acf5a95a-f5fe-4d53-818a-a6afa18e512c
