@@ -16,4 +16,11 @@ describe('Navigation tests', () => {
             .header.clickOnContactUsButton()
             .checkPageUrl();
     });
+    it('Navigate to the Sign In page via header, and verify url', () => {
+        homePage
+            .visit()
+            .checkPageUrl()
+            .header.clickOnSignInButton()
+            .checkPageUrl();
+    });
 });
