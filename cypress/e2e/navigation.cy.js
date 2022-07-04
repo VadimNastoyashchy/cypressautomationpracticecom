@@ -1,6 +1,19 @@
+import Home from '../src/pages/Home';
+
+const homePage = new Home();
+
 describe('Navigation tests', () => {
-    it('Navigate to the home page and verify url', () => {
-        cy.visit('/');
-        cy.url().should('eq', Cypress.config('baseUrl'));
+    it('Navigate to the Home page, and verify url', () => {
+        homePage
+            .visit()
+            .checkPageUrl();
+    });
+
+    it('Navigate to the Contact Us page via header, and verify url', () => {
+        homePage
+            .visit()
+            .checkPageUrl()
+            // .header.clickOnContactUsButton()
+            // .checkPageUrl();
     });
 });
