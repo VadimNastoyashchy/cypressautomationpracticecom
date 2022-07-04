@@ -16,6 +16,5 @@ module.exports = {
     ],
     'no-trailing-spaces': 'error',
     semi: [2, 'always'],
-
   }
 };
