@@ -8,12 +8,12 @@ export default class Header {
     get contactUsButton() {
         return cy.get(this.headerContainerLocator).contains('a', 'Contact us');
     }
+    get signInButton(){
+        return cy.get(this.headerContainerLocator).contains('a','Sign in');
+    }
     clickOnContactUsButton() {
         this.contactUsButton.click();
         return new ContactUs();
-    }
-    get signInButton(){
-        return cy.get(this.headerContainerLocator).contains('a','Sign in');
     }
     clickOnSignInButton(){
         this.signInButton.click();
