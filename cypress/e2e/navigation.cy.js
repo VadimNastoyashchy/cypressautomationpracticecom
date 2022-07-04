@@ -1,6 +1,8 @@
+import Verivy from './verifyUrl';
 describe('Navigation tests', () => {
-    it('Navigate to the home page and verify url', () => {
-        cy.visit('/');
-        cy.url().should('eq', Cypress.config('baseUrl'));
-    });
+  const verify = new Verivy();
+  it('Navigate to the home page and verify url', () => {
+    verify.visit();
+    verify.verification();
+  });
 });

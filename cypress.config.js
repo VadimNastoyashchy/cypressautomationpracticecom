@@ -1,5 +1,6 @@
 const {defineConfig} = require('cypress');
 module.exports = defineConfig({
+  projectId: '8jtx9u',
   e2e: {
     baseUrl: 'http://automationpractice.com/index.php',
     viewportWidth: 1920,
