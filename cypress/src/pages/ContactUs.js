@@ -1,7 +1,8 @@
-import BasePage from '../base/BasePage';
+export default class ContactUs {
+    url = 'index.php?controller=contact';
 
-export default class ContactUs extends BasePage{
-    constructor() {
-        super('index.php?controller=contact', 'Contact Us');
+    checkPageUrl() {
+        cy.url().should('eq', `${Cypress.config('baseUrl')}${this.url}`);
+        return this;
     }
 }

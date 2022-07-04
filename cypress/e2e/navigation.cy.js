@@ -13,7 +13,7 @@ describe('Navigation tests', () => {
         homePage
             .visit()
             .checkPageUrl()
-            // .header.clickOnContactUsButton()
-            // .checkPageUrl();
+            .header.clickOnContactUsButton()
+            .checkPageUrl();
     });
 });

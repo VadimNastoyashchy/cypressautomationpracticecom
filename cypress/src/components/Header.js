@@ -5,7 +5,7 @@ export default class Header {
     headerContainerLocator = '#header';
 
     get contactUsButton() {
-        return cy.get(this.headerContainerLocator).contains('a', 'Contact Us');
+        return cy.get(this.headerContainerLocator).contains('a', 'Contact us');
     }
 
     clickOnContactUsButton() {
