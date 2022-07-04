@@ -1,16 +1,14 @@
+import BasePage from '../base/BasePage';
 import Header from '../components/Header';
 
-export default class Home {
-    url = 'index.php';
+export default class Home extends BasePage {
     header = new Header();
+    constructor() {
+        super('index.php');
+    }
 
     visit() {
         cy.visit('/');
-        return this;
-    }
-
-    checkPageUrl() {
-        cy.url().should('eq', `${Cypress.config('baseUrl')}${this.url}`);
         return this;
     }
 }
