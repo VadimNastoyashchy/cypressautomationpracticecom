@@ -2,6 +2,9 @@ module.exports = {
   env: {
     node: true
   },
+  parserOptions: {
+    ecmaVersion: 'latest',
+  },
   extends: ['plugin:cypress/recommended', 'eslint:recommended'],
   rules: {
     quotes: [
@@ -13,5 +16,6 @@ module.exports = {
     ],
     'no-trailing-spaces': 'error',
     semi: [2, 'always'],
+
   }
 };
