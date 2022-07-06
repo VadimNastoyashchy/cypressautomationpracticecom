@@ -14,6 +14,11 @@ module.exports = defineConfig({
         viewportHeight: 1080,
         video: false,
         baseUrl: 'http://automationpractice.com/',
+        account: {
+            username: 'automationpractice@ukr.net',
+            password: '',
+            userTitle: 'John Wick'
+        },
     },
 });
 
