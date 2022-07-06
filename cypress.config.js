@@ -15,9 +15,10 @@ module.exports = defineConfig({
         video: false,
         baseUrl: 'http://automationpractice.com/',
         account: {
-            username: 'automationpractice@ukr.net',
+            userEmail: 'automationpractice@ukr.net',
             password: 'simple_automation_com_2021',
-            userTitle: 'John Wick'
+            userName: 'John Wick',
+            expectedText:'Welcome to your account. Here you can manage all of your personal information and orders.'
         },
     },
 });

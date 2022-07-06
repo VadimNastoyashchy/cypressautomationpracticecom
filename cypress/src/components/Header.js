@@ -3,6 +3,7 @@ import SignIn from '../pages/SignIn';
 
 export default class Header {
   headerContainerLocator = '#header';
+  nameAccountLocator = '.account';
 
   get contactUsButton() {
     return cy.get(this.headerContainerLocator).contains('a', 'Contact us');
@@ -11,7 +12,7 @@ export default class Header {
     return cy.get(this.headerContainerLocator).contains('a', 'Sign in');
   }
   get nameAccount() {
-    return cy.get(this.headerContainerLocator);
+    return cy.get(this.nameAccountLocator);
   }
   clickOnContactUsButton() {
     this.contactUsButton.click();

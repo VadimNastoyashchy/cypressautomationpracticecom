@@ -1,12 +1,7 @@
-import BasePage from '../base/BasePage';
 import Account from '../pages/Account';
 
-export default class AlreadyRegistered extends BasePage {
-  constructor() {
-    super('index.php?controller=authentication&back=my-account');
-  }
+export default class AlreadyRegistered  {
   alreadyRegisteredContainerLocator = '#login_form';
-
   loginFieldLocator = '#email';
   passwordFieldLocator = '#passwd';
   loginButtonLocator = '#SubmitLogin';
@@ -26,16 +21,14 @@ export default class AlreadyRegistered extends BasePage {
       .get(this.alreadyRegisteredContainerLocator)
       .find(this.loginButtonLocator);
   }
-  enterUsername(username) {
-    this.inputEmailField.type(username);
+  enterUserEmail(userEmail) {
+    this.inputEmailField.type(userEmail);
     return this;
   }
-
   enterPassword(password) {
     this.inputPasswordField.type(password);
     return this;
   }
-
   clickOnLoginButton() {
     this.loginButton.click();
     return new Account();

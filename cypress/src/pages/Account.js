@@ -3,18 +3,17 @@ import BasePage from '../base/BasePage';
 
 export default class Account extends BasePage {
   header = new Header();
+  accountInfoContainerLocator = '#center_column';
 
   constructor() {
     super('index.php?controller=my-account');
   }
-  pageContainContainerLocator = '#center_column';
 
   get accountInfo() {
-    return cy.get(this.pageContainContainerLocator);
+    return cy.get(this.accountInfoContainerLocator);
   }
-
-  checkTextIsPresent(receivedText) {
-    this.accountInfo.contains(receivedText);
+  checkTextIsPresent(expectedText) {
+    this.accountInfo.contains(expectedText);
     return this;
   }
 }
