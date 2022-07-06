@@ -8,5 +8,9 @@ it('Sign in page (Valid data)', () => {
         .checkPageUrl()
         .header.clickOnSignInButton()
         .alreadyRegisteredComponent
-        .enterUsername(Cypress.config('account')['username']);
+        .enterUsername(Cypress.config('account')['username'])
+        .enterPassword(Cypress.config('account')['password'])
+        .clickOnLoginButton()
+        .checkPageUrl()
+        .textInfo();
 });

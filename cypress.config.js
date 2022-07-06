@@ -16,7 +16,7 @@ module.exports = defineConfig({
         baseUrl: 'http://automationpractice.com/',
         account: {
             username: 'automationpractice@ukr.net',
-            password: '',
+            password: 'simple_automation_com_2021',
             userTitle: 'John Wick'
         },
     },
