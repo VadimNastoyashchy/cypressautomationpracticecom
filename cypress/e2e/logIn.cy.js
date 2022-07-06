@@ -12,5 +12,6 @@ it('Sign in page (Valid data)', () => {
         .enterPassword(Cypress.config('account')['password'])
         .clickOnLoginButton()
         .checkPageUrl()
-        .textInfo();
+        .checkTextIsPresent()
+        .header.checkingName();
 });

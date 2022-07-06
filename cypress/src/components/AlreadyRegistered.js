@@ -6,12 +6,12 @@ export default class AlreadyRegistered extends BasePage {
         super('index.php?controller=authentication&back=my-account');
     }
   alreadyRegisteredContainerLocator = '#login_form';
-  pageContainContainerLocator = '#center_column';
+
 
   loginFieldLocator = '#email';
   passwordFieldLocator = '#passwd';
   loginButtomLocator = '#SubmitLogin';
-  accountInfoLocator = '.info-account';
+
 
   get inputEmailField() {
     return cy
@@ -28,11 +28,6 @@ export default class AlreadyRegistered extends BasePage {
       .get(this.alreadyRegisteredContainerLocator)
       .find(this.loginButtomLocator);
   }
-  get accountInfo(){
-    return cy
-    .get(this.pageContainContainerLocator)
-    .find(this.accountInfoLocator);
-  }
   enterUsername(username) {
     this.inputEmailField.type(username);
     return this;
@@ -47,8 +42,5 @@ export default class AlreadyRegistered extends BasePage {
     this.loginButtom.click();
     return new Account();
   }
-  textInfo(){
-    this.accountInfo.contains('Welcome to your account. Here you can manage all of your personal information and orders.');
-    return this;
-  }
+
 }
