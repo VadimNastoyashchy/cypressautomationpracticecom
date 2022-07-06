@@ -11,7 +11,7 @@ export default class Header {
     return cy.get(this.headerContainerLocator).contains('a', 'Sign in');
   }
   get nameAccount() {
-    return cy.get(this.headerContainerLocator).contains('John Wick');
+    return cy.get(this.headerContainerLocator);
   }
   clickOnContactUsButton() {
     this.contactUsButton.click();
@@ -21,8 +21,8 @@ export default class Header {
     this.signInButton.click();
     return new SignIn();
   }
-  checkingName() {
-    this.nameAccount;
+  checkUserNameIsPresent(userName) {
+    this.nameAccount.contains(userName);
     return this;
   }
 }

@@ -10,13 +10,11 @@ export default class Account extends BasePage {
   pageContainContainerLocator = '#center_column';
 
   get accountInfo() {
-    return cy
-      .get(this.pageContainContainerLocator)
-      .contains('Welcome to your account. Here you can manage all of your personal information and orders.');
+    return cy.get(this.pageContainContainerLocator);
   }
 
-  checkTextIsPresent() {
-    this.accountInfo;
+  checkTextIsPresent(receivedText) {
+    this.accountInfo.contains(receivedText);
     return this;
   }
 }

@@ -12,6 +12,6 @@ it('Sign in page (Valid data)', () => {
         .enterPassword(Cypress.config('account')['password'])
         .clickOnLoginButton()
         .checkPageUrl()
-        .checkTextIsPresent()
-        .header.checkingName();
+        .checkTextIsPresent('Welcome to your account. Here you can manage all of your personal information and orders.')
+        .header.checkUserNameIsPresent('John Wick');
 });
