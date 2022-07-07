@@ -4,9 +4,7 @@ const homePage = new Home();
 
 describe('Navigation tests', () => {
     it('Navigate to the Home page, and verify url', () => {
-        homePage
-            .visit()
-            .checkPageUrl();
+        homePage.visit().checkPageUrl();
     });
 
     it('Navigate to the Contact Us page via header, and verify url', () => {
@@ -16,6 +14,7 @@ describe('Navigation tests', () => {
             .header.clickOnContactUsButton()
             .checkPageUrl();
     });
+
     it('Navigate to the Sign In page via header, and verify url', () => {
         homePage
             .visit()
