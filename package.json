@@ -9,8 +9,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint **/*.js",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -25,7 +31,8 @@
   "devDependencies": {
     "cypress": "10.2.0",
     "eslint-plugin-cypress": "2.12.1",
-    "mochawesome": "7.1.3",
-    "husky": "8.0.1"
+    "husky": "8.0.1",
+    "lint-staged": "13.0.3",
+    "mochawesome": "7.1.3"
   }
 }
