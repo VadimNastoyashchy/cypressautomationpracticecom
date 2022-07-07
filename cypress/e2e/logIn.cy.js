@@ -5,6 +5,7 @@ const homePage = new Home();
 describe('User Login  tests', () => {
   it('Sign in page (Valid data)', () => {
     homePage
+
       .visit()
       .checkPageUrl()
       .header.clickOnSignInButton()
