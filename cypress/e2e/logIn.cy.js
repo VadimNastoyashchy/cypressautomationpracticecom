@@ -2,7 +2,7 @@ import Home from '../src/pages/Home';
 
 const homePage = new Home();
 
-describe("User Login  tests", () => {
+describe('User Login  tests', () => {
   it('Sign in page (Valid data)', () => {
     homePage
       .visit()
