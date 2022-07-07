@@ -17,8 +17,7 @@ module.exports = defineConfig({
         account: {
             userEmail: 'automationpractice@ukr.net',
             password: 'simple_automation_com_2021',
-            userName: 'John Wick',
-            expectedText:'Welcome to your account. Here you can manage all of your personal information and orders.'
+            userName: 'John Wick'
         },
     },
 });

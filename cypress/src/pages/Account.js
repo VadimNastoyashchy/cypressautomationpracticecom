@@ -12,6 +12,7 @@ export default class Account extends BasePage {
   get accountInfo() {
     return cy.get(this.accountInfoContainerLocator);
   }
+
   checkTextIsPresent(expectedText) {
     this.accountInfo.contains(expectedText);
     return this;

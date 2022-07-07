@@ -21,6 +21,7 @@ export default class AlreadyRegistered  {
       .get(this.alreadyRegisteredContainerLocator)
       .find(this.loginButtonLocator);
   }
+
   enterUserEmail(userEmail) {
     this.inputEmailField.type(userEmail);
     return this;

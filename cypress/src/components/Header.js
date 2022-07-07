@@ -14,6 +14,7 @@ export default class Header {
   get nameAccount() {
     return cy.get(this.nameAccountLocator);
   }
+
   clickOnContactUsButton() {
     this.contactUsButton.click();
     return new ContactUs();

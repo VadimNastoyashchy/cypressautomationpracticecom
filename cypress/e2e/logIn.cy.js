@@ -13,7 +13,7 @@ describe('User Login  tests', () => {
       .enterPassword(Cypress.config('account')['password'])
       .clickOnLoginButton()
       .checkPageUrl()
-      .checkTextIsPresent(Cypress.config('account')['expectedText'])
+      .checkTextIsPresent('Welcome to your account. Here you can manage all of your personal information and orders.')
       .header.checkUserNameIsPresent(Cypress.config('account')['userName']);
   });
 });
