@@ -14,7 +14,7 @@ module.exports = defineConfig({
         viewportHeight: 1080,
         video: false,
         baseUrl: 'http://automationpractice.com/',
-        experimentalSessionAndOrigin: true,
+        loginAPIUrl: 'http://automationpractice.com/index.php?controller=authentication',
         account: {
             userEmail: 'automationpractice@ukr.net',
             password: 'simple_automation_com_2021',
