@@ -2,6 +2,7 @@ import Home from '../src/pages/Home';
 
 const homePage = new Home();
 
+
 describe('Navigation tests', () => {
     it('Navigate to the Home page, and verify url', () => {
         homePage.visit().checkPageUrl();
@@ -21,5 +22,11 @@ describe('Navigation tests', () => {
             .checkPageUrl()
             .header.clickOnSignInButton()
             .checkPageUrl();
+    });
+    it.only('Check links on Follow us section in footer', () => {
+        homePage
+            .visit()
+            .checkPageUrl()
+            .footerLinks.checkFooterLinks();
     });
 });

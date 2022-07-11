@@ -1,5 +1,6 @@
 import BasePage from '../base/BasePage';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default class Home extends BasePage {
     header = new Header();
@@ -12,4 +13,8 @@ export default class Home extends BasePage {
         cy.visit('/');
         return this;
     }
+    get footerLinks() {
+        return new Footer();
+    }
+
 }

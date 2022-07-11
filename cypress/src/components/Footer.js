@@ -8,7 +8,8 @@ export default class Footer {
       cy.get('ul')
         .contains(page)
         .then((link) => {
-          cy.request(link.prop('href'));
+          if (link.status === 200 && link.body.ok === true)
+        return;
         });
     });
   }
