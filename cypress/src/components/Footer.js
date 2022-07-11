@@ -1,16 +1,16 @@
 export default class Footer {
-  constructor() {
-    this.pages = ['Facebook', 'Twitter', 'Youtube', 'Google Plus'];
-  }
+    footerContainerLocator = '#footer';
 
-  checkFooterLinks() {
-    this.pages.forEach((page) => {
-      cy.get('ul')
-        .contains(page)
-        .then((link) => {
-          if (link.status === 200 && link.body.ok === true)
-        return;
+    get followUsSectionLinksList() {
+        return cy.get(this.footerContainerLocator)
+            .find('#social_block a');
+    }
+
+    checkFollowUsSectionLinks() {
+        this.followUsSectionLinksList.each((link) => {
+            cy.request('GET', link.attr('href')).then((response) => {
+                expect(response.status).eq(200);
+            });
         });
-    });
-  }
+    }
 }

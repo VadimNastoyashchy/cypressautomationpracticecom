@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 
 export default class Home extends BasePage {
     header = new Header();
+    footer = new Footer();
 
     constructor() {
         super('index.php');
@@ -13,8 +14,4 @@ export default class Home extends BasePage {
         cy.visit('/');
         return this;
     }
-    get footerLinks() {
-        return new Footer();
-    }
-
 }
