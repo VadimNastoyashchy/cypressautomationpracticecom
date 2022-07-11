@@ -22,4 +22,11 @@ describe('Navigation tests', () => {
             .header.clickOnSignInButton()
             .checkPageUrl();
     });
+
+    it('Check links on Follow us section in footer', () => {
+        homePage
+            .visit()
+            .checkPageUrl()
+            .footer.checkFollowUsSectionLinks();
+    });
 });

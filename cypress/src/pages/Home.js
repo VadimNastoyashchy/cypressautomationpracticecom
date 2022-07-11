@@ -1,8 +1,10 @@
 import BasePage from '../base/BasePage';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default class Home extends BasePage {
     header = new Header();
+    footer = new Footer();
 
     constructor() {
         super('index.php');
