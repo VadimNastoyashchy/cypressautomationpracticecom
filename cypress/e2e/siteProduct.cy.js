@@ -8,6 +8,6 @@ describe('Check product on site', () => {
         homePage
             .visit()
             .checkPageUrl()
-            .productList.openWindowProduct();
+            .productList.openQuickViewModalForFirstProductWithPriceSalary();
     });
 });
