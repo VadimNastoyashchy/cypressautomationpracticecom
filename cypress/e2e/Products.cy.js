@@ -10,7 +10,6 @@ describe('Check product on site', () => {
             .productList
             .openQuickViewModalForFirstProductWithPriceDiscount()
             .waitForLoad()
-            // .priceComparison();
-            .discount
+            .priceComparison();
     });
 });
