@@ -1,4 +1,4 @@
-import QuickView from '../../modal/QuickView';
+import QuickView from '../modals/QuickView';
 
 export default class ProductList {
     productsContainerLocator = '.tab-content';
