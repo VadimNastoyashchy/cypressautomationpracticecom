@@ -1,21 +1,26 @@
+import QuickView from '../../modal/QuickView';
+
 export default class ProductList {
     productsContainerLocator = '.tab-content';
     productContainerLocator = '.product-container';
-    productSalaryLocator = '#homefeatured .right-block .price-percent-reduction';
+    productDiscountLocator = '#homefeatured .right-block .price-percent-reduction';
     quickViewButtonLocator = '.quick-view';
 
-    get firstProductWithPriceSalary() {
+    get firstProductWithPriceDiscount() {
         return cy.get(this.productsContainerLocator)
-            .find(this.productSalaryLocator).eq(0)
+            .find(this.productDiscountLocator).eq(0)
             .parents(this.productContainerLocator);
     }
 
-    get firstProductWithPriceSalaryQuickModalButton() {
-        return this.firstProductWithPriceSalary.find(this.quickViewButtonLocator);
+    get firstProductWithPriceDiscountQuickModalButton() {
+        return this.firstProductWithPriceDiscount.find(this.quickViewButtonLocator);
     }
 
-    openQuickViewModalForFirstProductWithPriceSalary() {
-        this.firstProductWithPriceSalaryQuickModalButton.click({force: true});
+    openQuickViewModalForFirstProductWithPriceDiscount() {
+        this.firstProductWithPriceDiscountQuickModalButton.click({force: true})
+        .intercept('POST',`http://automationpractice.com/index.php/rand=`)
+        .as('createProgram')
+        .wait('@createProgram');
         return new QuickView();
     }
 }
