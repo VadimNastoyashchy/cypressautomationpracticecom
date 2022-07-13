@@ -17,10 +17,7 @@ export default class ProductList {
     }
 
     openQuickViewModalForFirstProductWithPriceDiscount() {
-        this.firstProductWithPriceDiscountQuickModalButton.click({force: true})
-        .intercept('POST',`http://automationpractice.com/index.php/rand=`)
-        .as('createProgram')
-        .wait('@createProgram');
+        this.firstProductWithPriceDiscountQuickModalButton.click({force: true});
         return new QuickView();
     }
 }

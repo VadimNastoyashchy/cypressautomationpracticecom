@@ -1,6 +1,5 @@
 import Home from '../src/pages/Home';
 
-
 const homePage = new Home();
 
 describe('Check product on site', () => {
@@ -8,7 +7,10 @@ describe('Check product on site', () => {
         homePage
             .visit()
             .checkPageUrl()
-            .productList.openQuickViewModalForFirstProductWithPriceDiscount()
-            .priceComparison();
+            .productList
+            .openQuickViewModalForFirstProductWithPriceDiscount()
+            .waitForLoad()
+            // .priceComparison();
+            .discount
     });
 });
