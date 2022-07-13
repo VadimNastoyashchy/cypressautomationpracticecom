@@ -1,6 +1,6 @@
 export default class QuickView {
     priceWithoutDiscountLocator = '#old_price_display';
-    priceWithDiscountPriceLocator = ' #our_price_display';
+    priceWithDiscountLocator = ' #our_price_display';
     discountPercentageLocator = ' #reduction_percent_display';
     loadingSpinnerLocator = '#fancybox-loading';
 
@@ -17,28 +17,28 @@ export default class QuickView {
         return cy.iframe('[class="fancybox-overlay fancybox-overlay-fixed"] iframe');
     }
 
-    get pastPrice() {
+    get  priceWithoutDiscount() {
         return this.modalWindow.find(this.priceWithoutDiscountLocator);
     }
 
-    get presentPrice() {
-        return this.modalWindow.find(this.priceWithDiscountPriceLocator);
+    get priceWithDiscount() {
+        return this.modalWindow.find(this.priceWithDiscountLocator);
     }
 
-    get discount() {
+    get discountPercentage() {
         return this.modalWindow.find(this.discountPercentageLocator);
     }
 
     discountPrice() {
-        return (this.pastPrice / 100) * this.discount;
+        return  (this.priceWithoutDiscount / 100) * this.discount;
     }
 
     discountDeduction() {
-        return (this.pastPrice - this.discountPrice);
+        return (this.priceWithoutDiscountLocator - this.discountPrice);
     }
 
     priceComparison() {
-        this.presentPrice.eq(this.discountDeduction);
+        this.discountDeduction === this.priceWithDiscountLocator;
         return this;
     }
 }
