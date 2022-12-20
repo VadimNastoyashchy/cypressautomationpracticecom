@@ -3,6 +3,9 @@ on: [workflow_dispatch]
 jobs:
  cypress-run:
     runs-on: ubuntu-latest
+    strategy:
+     matrix:
+      job: [0, 1, 2, 3]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
