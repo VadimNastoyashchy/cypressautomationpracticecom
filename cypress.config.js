@@ -1,6 +1,5 @@
 const {defineConfig} = require('cypress');
 module.exports = defineConfig({
-    projectId: '8jtx9u',
     reporter: 'mochawesome',
     reporterOptions: {
         charts: false,
