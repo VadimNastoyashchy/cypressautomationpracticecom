@@ -6,6 +6,7 @@ module.exports = {
     ecmaVersion: 'latest',
   },
   extends: ['plugin:cypress/recommended', 'eslint:recommended'],
+  ignorePatterns: ['node_modules/', 'reports/'],
   rules: {
     quotes: [
       'error',
