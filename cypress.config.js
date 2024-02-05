@@ -3,6 +3,7 @@ module.exports = defineConfig({
     reporter: 'mochawesome',
     reporterOptions: {
         charts: false,
+        overwrite: false,
         html: true,
         json: false,
         reportDir: 'reports',
@@ -12,8 +13,8 @@ module.exports = defineConfig({
         viewportWidth: 1920,
         viewportHeight: 1080,
         video: false,
-        baseUrl: 'http://automationpractice.com/',
-        loginAPIUrl: 'http://automationpractice.com/index.php?controller=authentication',
+        baseUrl: 'http://www.automationpractice.pl/',
+        loginAPIUrl: 'http://www.automationpractice.pl/index.php?controller=authentication',
         account: {
             userEmail: 'automationpractice@ukr.net',
             password: 'simple_automation_com_2021',

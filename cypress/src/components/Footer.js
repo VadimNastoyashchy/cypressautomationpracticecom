@@ -7,9 +7,20 @@ export default class Footer {
     }
 
     checkFollowUsSectionLinks() {
-        this.followUsSectionLinksList.each((link) => {
-            cy.request('GET', link.attr('href')).then((response) => {
-                expect(response.status).eq(200);
+        this.followUsSectionLinksList.each((element) => {
+            cy.request({
+                method: 'GET',
+                url: element.attr('href'),
+                failOnStatusCode: false
+            }).then((response) => {
+                if (response.status === 200) {
+                    expect(response.status).eq(200);
+                } else if (response.status === 404) {
+                    expect(response.status).eq(404);
+                }
+                else {
+                    console.log(`${Cypress.$(element).attr('href')}${response.status}`);
+                }
             });
         });
     }

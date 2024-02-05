@@ -8,6 +8,7 @@ describe('Check product on site', () => {
             .visit()
             .checkPageUrl()
             .productList
+            .clickOnBestSellersBtn()
             .openQuickViewModalForFirstProductWithPriceDiscount()
             .waitForLoad()
             .checkSumWithDiscountCalculatedCorrectly();

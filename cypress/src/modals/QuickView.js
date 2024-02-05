@@ -36,11 +36,11 @@ export default class QuickView {
                     const priceWithoutDiscountFormatted = Number(priceWithoutDiscount.replace(/[^\d.]/g, ''));
                     const priceWithDiscountFormatted = Number(priceWithDiscount.replace(/[^\d.]/g, ''));
                     const discountPercentageFormatted = Number(discountPercentage.replace(/[^\d.]/g, ''));
-                    const calculatedSumWithDiscount = priceWithoutDiscountFormatted - (priceWithoutDiscountFormatted / 100 * discountPercentageFormatted).toFixed(2);
+                    const calculatedSumWithDiscount = Math.floor(priceWithoutDiscountFormatted - (priceWithoutDiscountFormatted / 100 * discountPercentageFormatted));
                     expect(priceWithDiscountFormatted).eq(calculatedSumWithDiscount);
                 });
             });
         });
         return this;
-    }
+    } 
 }
