@@ -1,8 +1,8 @@
 import QuickView from '../modals/QuickView';
 
 export default class ProductList {
-    homeTabsContainerLocator = '#home-page-tabs'
-    bestSellersBtnLocator = '.blockbestsellers'
+    homeTabsContainerLocator = '#home-page-tabs';
+    bestSellersBtnLocator = '.blockbestsellers';
     productsContainerLocator = '.tab-content';
     productContainerLocator = '.product-container';
     productDiscountLocator = '#blockbestsellers .right-block .price-percent-reduction';

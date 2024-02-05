@@ -42,5 +42,5 @@ export default class QuickView {
             });
         });
         return this;
-    } 
+    }
 }
