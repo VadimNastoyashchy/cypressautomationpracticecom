@@ -19,7 +19,7 @@ export default class Footer {
                     expect(response.status).eq(404);
                 }
                 else {
-                    console.log(`${Cypress.$(element).attr('href')}${response.status}`);
+                    console.log(`${element.attr('href')}${response.status}`);
                 }
             });
         });
