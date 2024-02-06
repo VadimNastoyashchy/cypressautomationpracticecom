@@ -2,28 +2,32 @@ import ContactUs from '../pages/ContactUs';
 import SignIn from '../pages/SignIn';
 
 export default class Header {
-  headerContainerLocator = '#header';
-  nameAccountLocator = '.account';
+  private headerContainerLocator: string = '#header';
+  private nameAccountLocator: string = '.account';
 
-  get contactUsButton() {
+  private get contactUsButton(): Cypress.Chainable {
     return cy.get(this.headerContainerLocator).contains('a', 'Contact us');
   }
-  get signInButton() {
+
+  private get signInButton(): Cypress.Chainable {
     return cy.get(this.headerContainerLocator).contains('a', 'Sign in');
   }
-  get nameAccount() {
+
+  private get nameAccount(): Cypress.Chainable {
     return cy.get(this.nameAccountLocator);
   }
 
-  clickOnContactUsButton() {
+  public clickOnContactUsButton(): ContactUs {
     this.contactUsButton.click();
     return new ContactUs();
   }
-  clickOnSignInButton() {
+
+  public clickOnSignInButton(): SignIn {
     this.signInButton.click();
     return new SignIn();
   }
-  checkUserNameIsPresent(userName) {
+
+  public checkUserNameIsPresent(userName: string): this {
     this.nameAccount.contains(userName);
     return this;
   }

@@ -15,12 +15,12 @@ module.exports = defineConfig({
         viewportHeight: 1080,
         video: false,
         baseUrl: 'http://www.automationpractice.pl/',
-        loginAPIUrl: 'http://www.automationpractice.pl/index.php?controller=authentication',
-        account: {
-            userEmail: 'automationpractice@ukr.net',
-            password: 'simple_automation_com_2021',
-            userName: 'John Wick'
-        },
+        env:{
+                userEmail: 'automationpractice@ukr.net',
+                password: 'simple_automation_com_2021',
+                userName: 'John Wick',
+                loginAPIUrl: 'http://www.automationpractice.pl/index.php?controller=authentication',
+        }
     },
 });
 
