@@ -1,4 +1,4 @@
-name: Github-actions-pr-to-main
+name: Github-actions-pr-to-master
 on:
   pull_request:
   push:
